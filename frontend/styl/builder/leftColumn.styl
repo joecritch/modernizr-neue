@@ -61,9 +61,31 @@
   background: $White
 }
 
+.classPrefixLabel {
+  margin-top: 20px
+  display: block
+  small {
+    color: $Grey
+    text-transform: uppercase
+    font-size: 10px
+    margin-left: 5px
+  }
+}
+
 .classPrefix {
   border: $lightBorder
   line-height: 1.3em
+  display: block
+  width: 100%
+  padding: 5px 8px
+  margin-top: 5px
+  margin-bottom: 10px
+  border-color: #ccc
+  font-size: 12px
+  &:focus {
+    border-color: #666
+    outline: 0
+  }
 }
 
 .classNameAdded {

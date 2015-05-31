@@ -78,8 +78,11 @@ var LeftColumn = React.createClass({
         div({className: 'box heading-small' + (state.optionsToggled ? ' active' : ''), onClick: this.toggleOptions}, 'Options'),
         div({className: 'leftColumn-options'},
           options,
-          label({className: 'hidden', htmlFor: 'classPrefix'}, 'className prefix'),
-          input({className: inputClass, name: 'classPrefix', id: 'classPrefix', placeholder:'className prefix', onKeyUp: this.classNameAdded})
+          label({className: 'classPrefixLabel', htmlFor: 'classPrefix'},
+            DOM.span(null, 'className prefix'),
+            DOM.small(null, 'Optional')
+          ),
+          input({className: inputClass, name: 'classPrefix', id: 'classPrefix', placeholder:'e.g. "mod_" for "mod_csstransitions"', onKeyUp: this.classNameAdded})
         )
       )
     );
